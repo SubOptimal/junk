@@ -2,10 +2,12 @@ package airhacks.service.ping.boundary;
 
 import java.util.Date;
 
+import javax.enterprise.context.Dependent;
 import javax.inject.Inject;
 
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 
+@Dependent
 public class Messenger {
     
     @Inject

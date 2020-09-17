@@ -1,13 +1,14 @@
 package airhacks.service.ping.boundary;
 
-import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 
 import org.eclipse.microprofile.metrics.annotation.Metered;
 
-@Stateless
+import airhacks.service.Boundary;
+
+@Boundary
 @Path("ping")
 public class PingResource {
 

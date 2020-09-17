@@ -2,14 +2,14 @@ package airhacks.service.ping.boundary;
 
 import java.util.Date;
 
-import javax.ejb.Schedule;
-import javax.ejb.Schedules;
-import javax.ejb.Singleton;
+import javax.enterprise.context.ApplicationScoped;
 
-@Singleton
+import io.quarkus.scheduler.Scheduled;
+
+@ApplicationScoped
 public class JobScheduler {
 
-    @Schedule(minute = "*",second = "*/5",hour = "*")
+    @Scheduled(every = "5s")
     public void wakeUpAttendees() {
         System.out.println("JobScheduler.enclosing_method() " + new Date());
     }
